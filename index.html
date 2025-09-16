@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downstage - Connect Artists with Venues</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff006e;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffbe0b;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Abstract connecting lines representing artist to venue -->
+                    <!-- Left side - Artist lines -->
+                    <line x1="10" y1="40" x2="40" y2="40" stroke="white" stroke-width="2" class="logo-line artist-line-1"/>
+                    <line x1="10" y1="45" x2="40" y2="45" stroke="white" stroke-width="2" class="logo-line artist-line-2"/>
+                    <line x1="10" y1="50" x2="40" y2="50" stroke="white" stroke-width="2" class="logo-line artist-line-3"/>
+                    
+                    <!-- Connection pulse line -->
+                    <line x1="40" y1="45" x2="110" y2="45" stroke="white" stroke-width="3" class="logo-line connection-line"/>
+                    
+                    <!-- Right side - Venue lines -->
+                    <line x1="110" y1="35" x2="140" y2="35" stroke="white" stroke-width="2" class="logo-line venue-line-1"/>
+                    <line x1="110" y1="45" x2="140" y2="45" stroke="white" stroke-width="2" class="logo-line venue-line-2"/>
+                    <line x1="110" y1="55" x2="140" y2="55" stroke="white" stroke-width="2" class="logo-line venue-line-3"/>
+                    
+                    <!-- Text -->
+                    <text x="150" y="30" font-family="Inter, sans-serif" font-size="28" font-weight="300" fill="white" class="logo-text" text-anchor="middle">DOWN</text>
+                    <text x="150" y="55" font-family="Inter, sans-serif" font-size="28" font-weight="300" fill="white" class="logo-text" text-anchor="middle">STAGE</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo" id="navLogo">
+                    <div class="logo-icon">
+                        <svg class="logo-lines" viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff006e;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffbe0b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Minimalist connecting lines -->
+                            <line x1="5" y1="10" x2="15" y2="10" stroke="url(#navLogoGradient)" stroke-width="1.5"/>
+                            <line x1="15" y1="10" x2="25" y2="10" stroke="url(#navLogoGradient)" stroke-width="2"/>
+                            <line x1="25" y1="7" x2="35" y2="7" stroke="url(#navLogoGradient)" stroke-width="1.5"/>
+                            <line x1="25" y1="13" x2="35" y2="13" stroke="url(#navLogoGradient)" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h2>Downstage</h2>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Where Music Meets Magic</h1>
+            <p class="hero-subtitle">Connect with the perfect stage for your sound. From intimate coffee shops to underground venues, find your audience and let your music shine.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" data-role="artist">I'm an Artist</button>
+                <button class="btn btn-secondary" data-role="venue">I'm a Venue</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Artists Connected</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Venues Partnered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2,000+</span>
+                    <span class="stat-label">Shows Booked</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Box -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-card">
+                <h3 class="signup-title">Join the Waitlist</h3>
+                <form class="signup-form" id="signupForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="citySelect" required>
+                            <option value="">Select your city</option>
+                            <option value="nyc">New York City</option>
+                            <option value="la">Los Angeles</option>
+                            <option value="chicago">Chicago</option>
+                            <option value="austin">Austin</option>
+                            <option value="seattle">Seattle</option>
+                            <option value="denver">Denver</option>
+                            <option value="nashville">Nashville</option>
+                            <option value="other">Other (Tell us your city!)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="artistFields" style="display: none;">
+                        <input type="text" placeholder="Artist/Band name">
+                        <select>
+                            <option value="">Genre</option>
+                            <option value="rock">Rock</option>
+                            <option value="indie">Indie</option>
+                            <option value="folk">Folk</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="blues">Blues</option>
+                            <option value="electronic">Electronic</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="venueFields" style="display: none;">
+                        <input type="text" placeholder="Venue name">
+                        <select>
+                            <option value="">Venue type</option>
+                            <option value="bar">Bar</option>
+                            <option value="coffee-shop">Coffee Shop</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="theater">Theater</option>
+                            <option value="club">Club</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-cta" id="submitBtn">Join Waitlist</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">The Journey from Artist to Audience</h2>
+            <p class="section-subtitle">Every great performance starts with the right connection. Here's how we make it happen.</p>
+            
+            <div class="story-container">
+                <div class="story-step" data-step="1">
+                    <div class="story-content">
+                        <div class="step-number">01</div>
+                        <h3>Tell Your Story</h3>
+                        <p>Every artist has a unique voice. Share your music, your vision, and what makes your sound special. Upload your tracks, showcase your style, and let venues discover the magic you create.</p>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <i class="fas fa-music"></i>
+                                <span>Upload your best tracks</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-palette"></i>
+                                <span>Define your aesthetic</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Connect with your audience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-visual">
+                        <div class="visual-card">
+                            <div class="card-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h4>Artist Profile</h4>
+                            <p>Showcase your unique sound and style</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-step" data-step="2">
+                    <div class="story-visual">
+                        <div class="visual-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4>Venue Discovery</h4>
+                            <p>Find the perfect space for your performance</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <div class="step-number">02</div>
+                        <h3>Discover Your Stage</h3>
+                        <p>Our smart matching system analyzes your style, audience preferences, and venue atmosphere to connect you with the perfect stage. From cozy coffee shops to intimate music halls, find venues that amplify your sound.</p>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <i class="fas fa-search"></i>
+                                <span>Smart venue matching</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Atmosphere compatibility</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Available time slots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-step" data-step="3">
+                    <div class="story-content">
+                        <div class="step-number">03</div>
+                        <h3>Create Magic Together</h3>
+                        <p>Once connected, the real magic begins. Secure your slot, promote your show, and create an unforgettable live music experience. Our platform handles the logistics so you can focus on what matters most - your performance.</p>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Easy booking system</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Built-in promotion tools</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-star"></i>
+                                <span>Performance feedback</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-visual">
+                        <div class="visual-card">
+                            <div class="card-icon">
+                                <i class="fas fa-guitar"></i>
+                            </div>
+                            <h4>Live Performance</h4>
+                            <p>Create unforgettable musical moments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Trusted by Artists & Venues</h2>
+            <div class="testimonials">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"Downstage helped us find the perfect intimate venue for our acoustic set. The booking process was seamless."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Chen</strong>
+                            <span>Indie Folk Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"We've discovered amazing new artists through Downstage. The quality of acts has elevated our venue's reputation."</p>
+                        <div class="testimonial-author">
+                            <strong>Mike Rodriguez</strong>
+                            <span>The Blue Note Cafe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Finally, a platform that understands the indie music scene. No more cold-calling venues!"</p>
+                        <div class="testimonial-author">
+                            <strong>Alex Thompson</strong>
+                            <span>Alternative Rock Band</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="nav-dot active" data-slide="0"></button>
+                <button class="nav-dot" data-slide="1"></button>
+                <button class="nav-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Downstage</h3>
+                    <p>Connecting artists with perfect venues for intimate live music experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@downstage.app</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Downstage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
