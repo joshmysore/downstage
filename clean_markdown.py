@@ -41,3 +41,6 @@ with open('/Users/joshmysore/Downloads/Cursor-Design-Downstage-cleaned.md', 'w',
 
 print('Cleaned markdown file created successfully!')
 print('Removed all code blocks and kept only the conversation content.')
+
+
+

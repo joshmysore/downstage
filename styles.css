@@ -376,46 +376,6 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 60px;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.stat {
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease 1.5s forwards;
-}
-
-.stat:nth-child(2) {
-    animation-delay: 1.7s;
-}
-
-.stat:nth-child(3) {
-    animation-delay: 1.9s;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: var(--secondary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    font-weight: 500;
 }
 
 .btn {
@@ -917,9 +877,6 @@ body {
         max-width: 280px;
     }
     
-    .hero-stats {
-        gap: 40px;
-    }
     
     .signup-card {
         margin: 0 20px;
